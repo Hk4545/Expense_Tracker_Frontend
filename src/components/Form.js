@@ -18,7 +18,7 @@ function Form({ onRefresh }){
             return;
         }
 
-        const res = await axios.post("http://localhost:8080/api/transaction", details)
+        const res = await axios.post("https://expense-tracker-backend-zsjf.onrender.com/api/transaction", details)
         setDetails({
             name:"",
             type:"Investment",
