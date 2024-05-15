@@ -12,7 +12,7 @@ function Label(props){
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:8080/api/transaction");
+                const response = await axios.get("https://expense-tracker-backend-zsjf.onrender.com/api/transaction");
                 setTransactionArray(response.data);
                 console.log(response.data);
                 if(!response.data){
