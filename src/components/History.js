@@ -18,7 +18,7 @@ function History(props){
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:8080/api/transaction");
+                const response = await axios.get("https://expense-tracker-backend-zsjf.onrender.com/api/transaction");
                 setTransactionArray(response.data);
                 console.log(response.data);
             } catch (error) {
@@ -31,7 +31,7 @@ function History(props){
 
     const deleteTransaction = async(id) => {
         try {
-            const res = await axios.delete(`http://localhost:8080/api/delete_transaction/${id}`);
+            const res = await axios.delete(`https://expense-tracker-backend-zsjf.onrender.com/api/delete_transaction/${id}`);
             console.log(res.data);
             setrefresh((prevRefresh) => !prevRefresh);
             onRefresh();
@@ -69,7 +69,7 @@ function History(props){
                     alert("Name can't be null")
                     return;
                 }
-                const res = await axios.put(`http://localhost:8080/api/update_transaction/${selectedId}`, {
+                const res = await axios.put(`https://expense-tracker-backend-zsjf.onrender.com/api/update_transaction/${selectedId}`, {
                     name: details.name,
                     type: details.type,
                     amount: details.amount
