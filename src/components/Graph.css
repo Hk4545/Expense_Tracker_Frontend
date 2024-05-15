@@ -1,0 +1,7 @@
+.graphmain{
+    display: flex;
+    justify-content: center;
+}
+.chart{
+    position: relative;
+  }

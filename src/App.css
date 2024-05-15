@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+  padding: 2em 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.expensehead {
+  padding: 8px 8px;
+  background-color: rgb(154, 85, 211);
+  border-radius: 8px;
+  color: white;
+}
+
+.contentdiv {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 4px;
+}
